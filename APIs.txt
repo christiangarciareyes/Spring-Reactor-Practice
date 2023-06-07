@@ -1,0 +1,106 @@
+Listado de APIS:
+
+Login:
+
+POST   - http://localhost:8080/login +
+{
+    "username": "", (Administrador / Usuario)
+    "password": "" (123)
+}
+
+Menus:
+
+GET    - http://localhost:8080/menus + TOKEN
+
+Cursos:
+
+GET    - http://localhost:8080/cursos + TOKEN
+GET    - http://localhost:8080/cursos/{ID} + TOKEN
+POST   - http://localhost:8080/cursos + TOKEN +
+{
+    "nombre": "",
+    "siglas": "",
+    "estado": true
+}
+PUT    - http://localhost:8080/cursos/{ID} + TOKEN + 
+{
+    "nombre": "",
+    "siglas": "",
+    "estado": true
+}
+DELETE - http://localhost:8080/cursos/{ID} + TOKEN
+
+Estudiantes:
+
+GET    - http://localhost:8080/estudiantes + TOKEN
+GET    - http://localhost:8080/estudiantes/{ID} + TOKEN
+POST   - http://localhost:8080/estudiantes + TOKEN +
+{
+    "nombres": "",
+    "apelldios": "",
+    "dni": "",
+    "edad": ""
+}
+PUT    - http://localhost:8080/estudiantes/{ID} + TOKEN + 
+{
+    "nombres": "",
+    "apelldios": "",
+    "dni": "",
+    "edad": ""
+}
+DELETE - http://localhost:8080/estudiantes/{ID} + TOKEN
+
+Matricula:
+
+GET    - http://localhost:8080/matricula + TOKEN
+GET    - http://localhost:8080/matricula/{ID} + TOKEN
+POST   - http://localhost:8080/matricula + TOKEN +
+{
+    "fechaMatricula": "",
+    "estudiante": {
+        "id": ""
+    },
+    "items": [
+        {
+            "item": 0,
+            "curso": {
+                "id": ""
+            }
+        },
+        {
+            "item": 0,
+            "curso": {
+                "id": ""
+            }
+        }
+    ],
+    "estado": -
+}
+PUT    - http://localhost:8080/matricula/{ID} + TOKEN + 
+{
+    "fechaMatricula": "",
+    "estudiante": {
+        "id": ""
+    },
+    "items": [
+        {
+            "item": 0,
+            "curso": {
+                "id": ""
+            }
+        },
+        {
+            "item": 0,
+            "curso": {
+                "id": ""
+            }
+        }
+    ],
+    "estado": -
+}
+DELETE - http://localhost:8080/matricula/{ID} + TOKEN
+
+Extras:
+
+GET    - http://localhost:8080/estudiantes/asc
+GET    - http://localhost:8080/estudiantes/desc
